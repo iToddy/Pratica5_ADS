@@ -33,32 +33,37 @@ public class ArreyList {
 	              
 	    	 case 2:
 	    		 
-	    		 int j = cadastro.size();
+	    		 String excludename = JOptionPane.showInputDialog("Digite um dado do contato q deseja excluir: ");
 	    		 
-	    		 for (int i = 0; i<j ;i++)
+	    		 for (int i = 0; i<cadastro.size(); i++)
 	    		 
 	    		 {
-	    			String excludename = JOptionPane.showInputDialog("Digite um dado do contato q deseja excluir: ");
 	    			if (cadastro.get(i).contains(excludename)) 
 	    			{
 	    				cadastro.remove(i);
 	    				 JOptionPane.showMessageDialog(null, "Item excluído com sucesso");
+	    				 i--;
+	    			} else if (i==cadastro.size()-1) 
+	    			{
+	    				JOptionPane.showMessageDialog(null, "Item não encontrado");
 	    			}
 	    		 }
 	    		 
 	    		 break;
 	    		 
 	    	 case 3: 
+
+	    		 String search = JOptionPane.showInputDialog("Digite um dado do contato q deseja pesquisar: ");
 	    		 
-	    		 int x = cadastro.size();
-	    		 
-	    		 for (int y = 0; y<x ;y++)
+	    		 for (int y = 0; y<cadastro.size(); y++)
 	    		 
 	    		 {
-	    			String search = JOptionPane.showInputDialog("Digite um dado do contato q deseja pesquisar: ");
 	    			if (cadastro.get(y).contains(search)) 
 	    			{
 	    				JOptionPane.showMessageDialog(null,"Item excluído: " + cadastro.get(y) );
+	    			}else if (y==cadastro.size()-1) 
+	    			{
+	    				JOptionPane.showMessageDialog(null, "Usuário nao encontrado");
 	    			}
 	    		 }
 	    		 
