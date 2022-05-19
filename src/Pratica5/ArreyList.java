@@ -40,8 +40,8 @@ public class ArreyList {
 	    		 {
 	    			if (cadastro.get(i).contains(excludename)) 
 	    			{
+	    				JOptionPane.showMessageDialog(null, cadastro.get(i) + " excluído com sucesso");
 	    				cadastro.remove(i);
-	    				 JOptionPane.showMessageDialog(null, "Item excluído com sucesso");
 	    				 i--;
 	    			} else if (i==cadastro.size()-1) 
 	    			{
